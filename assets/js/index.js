@@ -88,6 +88,12 @@ function getCalanderDays(date) {
 function constructCalendar(month) {
   numWeeks = month.length
 
+  tableHTML = ""
+  tableHeader = "<tr><th>Sunday</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th></tr>"
+
+  tableHTML = tableHTML + tableHeader
+
   calendarDiv = document.getElementById("calendar_div")
-  calendarDiv.innerHTML = month
+  calendarDiv.innerHTML = tableHTML
 }
+
