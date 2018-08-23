@@ -114,10 +114,45 @@ input[type="date"]::-webkit-clear-button {
   background-color: #fff;
 }
 
+
 table {
   width: 100%;
-  box-sizing: border-box;
-  box-shadow: inset 0px 0px 0px 1px;
+  /* box-sizing: border-box; */
+  /* box-shadow: inset 0px 0px 0px 1px; */
   border-spacing: 0;
-  color: #ee6e73;
+}
+th, td {
+  border: 1px solid white;
+}
+th {
+  border-bottom: double white;
+  height: 40px;
+}
+
+td {
+  width: 100px;
+  vertical-align: top;
+  height: 100px;
+  padding: 5px;
+}
+td .wrapper{
+  height: 100px;
+  display: grid;
+  grid-template-rows: 50px auto;
+  grid-template-areas:
+    "date"
+    "menuitem";
+}
+td .date {
+  grid-area: date;
+  /* border: 1px solid white; */
+  /* width: 20px; */
+  /* text-align: center; */
+  font-size: 1.5em;
+}
+td .menuitem {
+  /* padding: 20px; */
+  grid-area: menuitem;
+  vertical-align: center;
+  text-align: center;
 }

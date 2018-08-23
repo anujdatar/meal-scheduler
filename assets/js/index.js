@@ -1,10 +1,13 @@
 
 // get today's data and set in the date widget
-const today = new Date().toISOString().substr(0, 10)
-document.querySelector("#startdate").value = today
+const today = new Date(2018, 9, 5)
+console.log(today)
+document.querySelector("#startdate").value = today.toISOString().substr(0, 10)
+
+monthDays = getCalanderDays(today)
+console.log(monthDays)
 
 dateWidget = document.getElementById("startdate")
-console.log(dateWidget.value)
 
 // get file input
 const inputFile = document.getElementById("listfile")
@@ -57,3 +60,61 @@ function readCSV(fileText) {
   }
   return items
 }
+
+function getTodaysData(today) {
+  const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  console.log(days[today.getDay()])
+  console.log(months[today.getMonth()])
+}
+
+function getCalanderDays(today) {
+  const month = today.getMonth()
+  const year = today.getFullYear()
+
+  const firstDate = new Date(year, month, 1)
+  const lastDate = new Date(year, month+1, 0)
+
+  let weeks=[]
+  const numDays= lastDate.getDate();
+   
+  let start=1;
+  let end=7-firstDate.getDay();
+  while(start<=numDays) {
+    weeks.push({start:start,end:end});
+    start = end + 1;
+    end = end + 7;
+    if(end>numDays) {
+      end=numDays;
+    }   
+  }
+  let weekDays = []
+  for (i=0; i<weeks.length; i++) {
+    startDay = weeks[i].start
+    endDay = weeks[i].end
+
+    let currentWeek = []
+    while (startDay <= endDay) {
+      currentWeek.push(startDay)
+      startDay += 1
+    }
+    weekDays.push(currentWeek)
+  }
+
+  if (weekDays[0].length < 7) {
+    const daysRequired = weekDays[0].length - 7
+    const prevMonthDays = new Date(year, month, 0).getDate()
+    for (j=prevMonthDays; weekDays[0].length<7; j--) {
+      weekDays[0].unshift(j)
+    }
+  }
+
+  if (weekDays[weekDays.length-1].length < 7) {
+    for (j=1; weekDays[weekDays.length-1].length<7; j++) {
+      weekDays[weekDays.length-1].push(j)
+    }
+  }
+  return weekDays
+}
+
