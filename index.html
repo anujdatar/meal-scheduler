@@ -18,23 +18,20 @@
   </div>
   
   <div class="main">
-    <form name="my_form" id="my_form" onsubmit="generate_cal(); return false">
-      <div id="dateselect">
-        <label for="startdate">Select start date</label><br>
-        <input type="date" name="startdate" id="startdate">
-      </div>
-
-      <div id="fileselect">
-        <label for="listfile">Upload items list, separated by "," or "Return". *.csv or *.txt</label><br>
-        <input type="file" name="listfile" id="listfile" accept="text/csv"><br>
-      </div>
-
-      <div id="clearfloats"></div><br><br>
-      <input type="submit" value="Generate" id="submit">
-    </form>
-
-    <div id="my1"></div>
-
+    <div class="form_div">
+      <form name="my_form" id="my_form" onsubmit="generate_cal(); return false">
+        <div id="dateselect">
+          <label for="startdate">Select start date</label><br>
+          <input type="date" name="startdate" id="startdate">
+        </div>
+        
+        <div id="clearfloats"></div><br><br>
+        <input type="submit" value="Generate" id="submit">
+      </form>
+    </div>
+    <br><br>
+    <div id="calendar_div">
+    </div>
   </div>
   
   <script src="assets/js/index.js"></script>

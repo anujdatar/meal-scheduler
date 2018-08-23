@@ -45,11 +45,11 @@ div.main {
   padding: 15px;
 }
 
-div#fileselect {
+/* div#fileselect {
   float: left;
-}
+} */
 div#dateselect {
-  float: right;
+  float: left;
 }
 #clearfloats {
   clear: both;
@@ -64,7 +64,7 @@ nav, .btn, input[type="file"]::-webkit-file-upload-button, input[type="submit"] 
 .btn, input[type="file"]::-webkit-file-upload-button, input[type="submit"] {
   -webkit-tap-highlight-color: transparent;
   
-  margin-top: -2px;
+  /* margin-top: -2px; */
   background-color: var(--asthetic-color);
   border: none;
   border-radius: 2px;
@@ -82,6 +82,7 @@ nav, .btn, input[type="file"]::-webkit-file-upload-button, input[type="submit"] 
 input[type="file"] {
   font-family: var(--fonts);
   font-size: 1em;
+  margin-top: 5px;
 }
 
 input[type="date"] {
@@ -138,7 +139,7 @@ td {
 td .wrapper{
   height: 100px;
   display: grid;
-  grid-template-rows: 50px auto;
+  grid-template-rows: 1.5em auto;
   grid-template-areas:
     "date"
     "menuitem";
@@ -151,7 +152,6 @@ td .date {
   font-size: 1.5em;
 }
 td .menuitem {
-  /* padding: 20px; */
   grid-area: menuitem;
   vertical-align: center;
   text-align: center;
