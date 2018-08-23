@@ -113,3 +113,11 @@ input[type="date"]::-webkit-clear-button {
   /* display: none; */
   background-color: #fff;
 }
+
+table {
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 0px 1px;
+  border-spacing: 0;
+  color: #ee6e73;
+}

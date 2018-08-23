@@ -18,15 +18,15 @@
   </div>
   
   <div class="main">
-    <form action="put" name="my_form" id="my_form" onsubmit="generate_cal()">
+    <form name="my_form" id="my_form" onsubmit="generate_cal(); return false">
       <div id="dateselect">
         <label for="startdate">Select start date</label><br>
         <input type="date" name="startdate" id="startdate">
       </div>
 
       <div id="fileselect">
-        <label for="listfile">Upload list of items in *.csv format</label><br>
-        <input type="file" name="listfile" id="listfile" accept="text/csv">
+        <label for="listfile">Upload items list, separated by "," or "Return". *.csv or *.txt</label><br>
+        <input type="file" name="listfile" id="listfile" accept="text/csv"><br>
       </div>
 
       <div id="clearfloats"></div><br><br>
@@ -34,7 +34,7 @@
     </form>
 
     <div id="my1"></div>
-    <div id="my2"></div>
+
   </div>
   
   <script src="assets/js/index.js"></script>

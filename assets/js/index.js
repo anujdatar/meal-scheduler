@@ -1,51 +1,59 @@
 
 // get today's data and set in the date widget
-let today = new Date().toISOString().substr(0, 10)
+const today = new Date().toISOString().substr(0, 10)
 document.querySelector("#startdate").value = today
 
 dateWidget = document.getElementById("startdate")
 console.log(dateWidget.value)
 
 // get file input
-let inputFile = document.getElementById("listfile")
+const inputFile = document.getElementById("listfile")
 // console.log(inputFile)
 
 function generate_cal() {
-  console.log('aaaaaaaaaaaaaaaaaaaaaaa')
-  let form = document.getElementById("my_form")
+  const form = document.getElementById("my_form")
+  // form.submit().preventDefault()
 
-  let date = form[0].value
+  const date = document.getElementById("startdate").value
   if (!date) {
     alert('please select date')
   }
 
-  let file = form[1].value
+  const file = document.getElementById("listfile").files[0]
   if (!file) {
     alert('please upload a menu list')
+    return False
   }
+  else {
+    const reader = new FileReader()
+    reader.readAsText(file, "UTF-8")
 
-  document.getElementById("my1").innerHTML = date
-  document.getElementById("my2").innerHTML = file
-
-
-  // var XHR = new XMLHttpRequest()
-  // var FD = new FormData(form)
-
-  // XHR.addEventListener("load", function(event) {
-  //   alert(event.target.responseText)
-  // })
-
-  // XHR.addEventListener("error", function(event) {
-  //   alert('Oops!')
-  // })
-
-  // // XHR.open("POST", "/index.php")
-
-  // // XHR.send(FD)
-
-  // form.addEventListener("submit", function(event) {
-  //   event.preventDefault()
-  // })
-
+    reader.onload = function (event) {
+      text = event.target.result
+      items = readCSV(text)
+      console.log(items)
+    }
+    reader.onerror = function () {
+      alert('error')
+      return False
+    }
+  }
 }
 
+function readCSV(fileText) {
+  const lines = fileText.split(/\r\n|\n/)  // split at new lines
+
+  // document.getElementById("my1").innerHTML = lines
+  let items = []
+  for (let i=0; i<lines.length; i++) {
+    if (lines[i].length > 0) {
+      items_row = lines[i].split(",")
+      for (j=0; j<items_row.length; j++) {
+        if (items_row[j].length > 0) {
+          items.push(items_row[j])
+        }
+      }
+    }
+  }
+  return items
+}
