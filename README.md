@@ -1,4 +1,5 @@
 # meal-scheduler
+Generate a random meal schedule for a list
 
 ## Project setup
 ```
