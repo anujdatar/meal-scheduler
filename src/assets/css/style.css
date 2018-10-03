@@ -1,0 +1,168 @@
+:root {
+  --asthetic-color: #ee6e73;
+  --fonts: Ariel, Hevletica, san-serif;
+}
+
+body {
+  background: #263238;
+  color: #fff;
+  font-family: var(--fonts);
+}
+
+nav {
+  color: #fff;
+  background-color: var(--asthetic-color);
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  padding-bottom: 20px;
+}
+nav a {
+  padding: 10px;
+  height: 56px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+nav a.router-link-exact-active {
+  color: black;
+}
+nav a:hover, nav a.router-link-exact-active {
+  background-color: #f18589;
+  border-radius: 2px;
+}
+nav .logo {
+  font-size: 2em;
+  float: left;
+}
+nav .nav-page {
+  float: right;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+div.main {
+  line-height: 2em;
+  padding: 15px;
+}
+
+/* div#fileselect {
+  float: left;
+} */
+div#dateselect {
+  float: left;
+}
+#clearfloats {
+  clear: both;
+}
+
+nav, .btn, input[type="file"]::-webkit-file-upload-button, input[type="submit"] {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn, input[type="file"]::-webkit-file-upload-button, input[type="submit"] {
+  -webkit-tap-highlight-color: transparent;
+  
+  /* margin-top: -2px; */
+  background-color: var(--asthetic-color);
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 16px;
+  text-transform: uppercase;
+  vertical-align: middle;
+
+  color: #fff;
+  font-family: var(--fonts);
+  font-size: 1em;
+}
+input[type="file"] {
+  font-family: var(--fonts);
+  font-size: 1em;
+  margin-top: 10px;
+}
+input[type="text"] {
+  width: 300px;
+  height: 2em;
+  margin: 10px 20px 10px 0px;
+  color: #000;
+  border-radius: 2px;
+}
+
+input[type="date"] {
+  background: var(--asthetic-color);
+  border: none;
+  width: 160px;
+  height: 36px;
+  margin-top: -2px;
+  color: #fff;
+  border-radius: 2px;
+}
+input[type="date"]::-webkit-datetime-edit {
+  padding: .25em;
+  font-family: var(--fonts);
+  font-size: 1.25em;
+  border: none;
+  text-transform: uppercase;
+}
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  /* align-self: center; */
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  background: var(--asthetic-color);
+  opacity: 1;
+  margin-right: 5px;
+}
+input[type="date"]::-webkit-clear-button {
+  /* display: none; */
+  background-color: #fff;
+}
+
+
+table {
+  width: 100%;
+  /* box-sizing: border-box; */
+  /* box-shadow: inset 0px 0px 0px 1px; */
+  border-spacing: 0;
+}
+th, td {
+  border: 1px solid white;
+}
+th {
+  border-bottom: double white;
+  height: 40px;
+}
+
+td {
+  width: 100px;
+  vertical-align: top;
+  height: 100px;
+  padding: 5px;
+}
+td .wrapper{
+  height: 100px;
+  display: grid;
+  grid-template-rows: 1.5em auto;
+  grid-template-areas:
+    "date"
+    "menuitem";
+}
+td .date {
+  grid-area: date;
+  /* border: 1px solid white; */
+  /* width: 20px; */
+  /* text-align: center; */
+  font-size: 1.5em;
+}
+td .menuitem {
+  grid-area: menuitem;
+  vertical-align: center;
+  text-align: center;
+}
