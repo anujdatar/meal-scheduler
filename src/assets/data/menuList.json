@@ -1,0 +1,29 @@
+{
+  "mealList": [
+    {
+      "id": 1,
+      "name": "Hannah Dal",
+      "selected":  true
+    },
+    {
+      "id": 2,
+      "name": "Fajitas",
+      "selected":  true
+    },
+    {
+      "id": 3,
+      "name": "Tacos",
+      "selected":  true
+    },
+    {
+      "id": 4,
+      "name": "Chicken cumin soup",
+      "selected":  true
+    },
+    {
+      "id": 5,
+      "name": "Alfredo",
+      "selected":  true
+    }
+  ]
+}

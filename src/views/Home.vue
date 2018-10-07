@@ -1,18 +1,26 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main">
+    <form name="generateCal" id="generateCal">
+      <div id="dateSelector">
+        <label for="startDate">Select start date</label>
+        <input type="date" name="startDate" id="startDate">
+      </div>
+      <div id="generateBtn">
+        <input type="submit" value="Generate Calendar" id="generateBtn">
+      </div>
+    </form>
+    <Calendar />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Calendar from '@/components/calendar.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Calendar
   }
 }
 </script>

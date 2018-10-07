@@ -14,9 +14,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/menu',
-      name: 'menu',
-      component: () => import(/* webpackChunkName: "menu" */ './views/Menu.vue')
+      path: '/whatDoIEat',
+      name: 'whatDoIEat',
+      component: () => import(/* webpackChunkName: "whatDoIEat" */ './views/DinnerOptions.vue')
     },
     {
       path: '/about',

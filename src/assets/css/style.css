@@ -8,7 +8,12 @@ body {
   color: #fff;
   font-family: var(--fonts);
 }
+div.main {
+  line-height: 1.1em;
+  padding: 10px;
+}
 
+/* navbar */
 nav {
   color: #fff;
   background-color: var(--asthetic-color);
@@ -43,17 +48,14 @@ nav .nav-page {
   padding-right: 30px;
 }
 
-div.main {
-  line-height: 2em;
-  padding: 15px;
+/* buttons or items on homepage */
+#dateSelector {
+  float: left;
+}
+#generateBtn {
+  float: right;
 }
 
-/* div#fileselect {
-  float: left;
-} */
-div#dateselect {
-  float: left;
-}
 #clearfloats {
   clear: both;
 }
@@ -100,7 +102,7 @@ input[type="date"] {
   border: none;
   width: 160px;
   height: 36px;
-  margin-top: -2px;
+  margin-left: 10px;
   color: #fff;
   border-radius: 2px;
 }
@@ -124,7 +126,6 @@ input[type="date"]::-webkit-clear-button {
   /* display: none; */
   background-color: #fff;
 }
-
 
 table {
   width: 100%;
@@ -165,4 +166,44 @@ td .menuitem {
   grid-area: menuitem;
   vertical-align: center;
   text-align: center;
+}
+
+/* menu list */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  padding: 10px;
+  background: #f6f6f6;
+  color: #555;
+  position: relative;
+  margin-bottom: 1px;
+}
+li input[type="checkbox"] {
+  margin-right: 50px;
+}
+li button {
+  float: right;
+    text-transform: uppercase;
+    font-size: .8em;
+    background: #f9d0e3;
+    border: none;
+    padding: 5px;
+    color: #ee6e73;
+    cursor:pointer;
+}
+
+/* menu picker page */
+.dinnerMenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "addItems menuList";
+}
+#itemAddForm {
+  grid-area: addItems;
+}
+#itemList {
+  grid-area: menuList;
 }
