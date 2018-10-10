@@ -24,6 +24,9 @@ jspm_packages/
 .DS_Store
 /dist
 
+# some old files
+old/
+
 # TypeScript v1 declaration files
 typings/
 

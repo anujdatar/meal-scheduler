@@ -8,7 +8,7 @@ body {
   color: #fff;
   font-family: var(--fonts);
 }
-div.main {
+.main {
   line-height: 1.1em;
   padding: 10px;
 }
