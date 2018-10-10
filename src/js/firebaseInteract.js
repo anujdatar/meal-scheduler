@@ -1,17 +1,21 @@
 
 import firebase from 'firebase/app'
 import 'firebase/firestore'
+import { firebaseConfig } from '../auth/firebaseAuth'
 
+
+// set up firebase config - sensitive information - auth key.
+//    actual info stored in another file not committed to git
+// const config = {
+//   apiKey: "....",
+//   authDomain: "your-project-name.firebaseapp.com",
+//   databaseURL: "https://your-project-name.firebaseio.com",
+//   projectId: "your-project-id",
+//   storageBucket: "your-project-name.appspot.com",
+//   messagingSenderId: ""
+// }
 // Initialize Firebase
-const config = {
-  apiKey: "AIzaSyA4sKPiPmYcdDlPmJ__b2_DNDQts4AvVRU",
-  authDomain: "express-server-ajax.firebaseapp.com",
-  databaseURL: "https://express-server-ajax.firebaseio.com",
-  projectId: "express-server-ajax",
-  storageBucket: "express-server-ajax.appspot.com",
-  messagingSenderId: "234464160863"
-}
-firebase.initializeApp(config)
+firebase.initializeApp(firebaseConfig)
 
 // Initialize firestore database
 const db = firebase.firestore()

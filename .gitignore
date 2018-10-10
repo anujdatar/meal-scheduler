@@ -76,3 +76,6 @@ coverage
 *.njsproj
 *.sln
 *.sw*
+
+# auth or api files
+src/auth/
