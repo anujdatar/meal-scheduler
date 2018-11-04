@@ -85,6 +85,7 @@ testem.log
 .sublime-workspace
 .atom
 .idea
+.vscode
 *.suo
 *.ntvs*
 *.njsproj
