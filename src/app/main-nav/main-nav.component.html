@@ -1,0 +1,41 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'">
+    <mat-toolbar color="primary">
+      <a routerLink="">Home</a>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="dinnerOptions">
+        Dinner Options
+      </a>
+      <a mat-list-item routerLink="about">
+        About
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a routerLink="">
+        Hannah's Meal Scheduler
+      </a>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+<!-- to make the side nav toolbar open-close automatically based on window size
+  [opened]="!(isHandset$ | async)"
+  goes in the sidenav drawer-->
+
+<!-- to make the menu toggle button appear and disappear based on window size 
+  *ngIf="isHandset$ | async"
+  goes in the sidenav toolbar toggle button-->
