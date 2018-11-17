@@ -1,5 +1,5 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { FileUploadComponent } from "../file-upload/file-upload.component";
+import { FileUploadComponent } from '../file-upload/file-upload.component';
 
 @NgModule({
   declarations: [DinnerOptionsComponent],
