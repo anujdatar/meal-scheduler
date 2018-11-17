@@ -12,6 +12,7 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule,
 import { HomepageComponent } from './homepage/homepage.component';
 import { AboutComponent } from './about/about.component';
 import { DinnerOptionsComponent } from './dinner-options/dinner-options.component';
+import { FileUploadComponent } from './file-upload/file-upload.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DinnerOptionsComponent } from './dinner-options/dinner-options.componen
     MainNavComponent,
     HomepageComponent,
     AboutComponent,
-    DinnerOptionsComponent
+    DinnerOptionsComponent,
+    FileUploadComponent
   ],
   imports: [
     BrowserModule,
