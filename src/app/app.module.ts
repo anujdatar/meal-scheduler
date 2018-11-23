@@ -8,7 +8,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule,
   MatIconModule, MatListModule, MatFormFieldModule, MatInputModule,
-  MatSelectModule } from '@angular/material';
+  MatSelectModule, MatProgressBarModule, MatCardModule } from '@angular/material';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AboutComponent } from './about/about.component';
 import { DinnerOptionsComponent } from './dinner-options/dinner-options.component';
@@ -35,7 +35,9 @@ import { FileUploadComponent } from './file-upload/file-upload.component';
     MatListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

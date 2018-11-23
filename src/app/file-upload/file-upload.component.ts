@@ -1,11 +1,4 @@
 import { Component, OnInit, NgModule } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material';
-
-@NgModule({
-  declarations: [FileUploadComponent],
-  exports: [FileUploadComponent],
-  imports: [MatFormFieldModule]
-})
 
 @Component({
   selector: 'app-file-upload',

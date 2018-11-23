@@ -1,0 +1,55 @@
+@import '~src/styleColors';
+
+
+.fileUploader {
+
+  input[type="file"]::-webkit-file-upload-button, input[type="submit"] {
+    color: $myForeground;
+    background-color: $myPrimary;
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    margin-bottom: 5px;
+  }
+
+  input[type="file"] {
+    font-size: 1em;
+    margin-top: 5px;
+  }
+
+  mat-card {
+    width: 50%;
+
+    mat-card-content {
+      width: 100%;
+      margin-top: -10px;
+      padding-bottom: 10px;
+
+      label {
+        display: block;
+        margin-bottom: -20px;
+      }
+
+      mat-progress-bar {
+        width: 80%;
+        // vertical-align: middle;
+        float: left;
+        padding-top: 18px;
+        padding-right: 10px;
+      }
+
+      button{
+        float: right;
+        // margin-right:1px;
+      }
+    }
+    .cardBtn {
+      background: $myAccent;
+    }
+  }
+}

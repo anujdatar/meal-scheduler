@@ -1,0 +1,19 @@
+// import main style scss file
+@import '~src/styles';
+
+// $meal-scheduler-primary: mat-palette($mat-pink, A200, A100, A400);
+
+$myPrimary: map-get($meal-scheduler-primary, A200);
+$myPrimary-lighter: map-get($meal-scheduler-primary, A100);
+$myPrimary-darker: map-get($meal-scheduler-primary, A400);
+
+$myAccent: map-get($meal-scheduler-accent, default);
+$myAccent-lighter: map-get($meal-scheduler-accent, lighter);
+$myAccent-darker: map-get($meal-scheduler-accent, darker);
+
+$myWarn: map-get($meal-scheduler-warn, default);
+$myWarn-lighter: map-get($meal-scheduler-warn, lighter);
+$myWarn-darker: map-get($meal-scheduler-warn, darker);
+
+$myForeground: map-get(map-get($meal-scheduler-theme, foreground), base);
+$myBackground: map-get(map-get($meal-scheduler-theme, background), base);

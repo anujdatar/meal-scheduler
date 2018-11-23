@@ -2,9 +2,8 @@ import { Component, OnInit, NgModule } from '@angular/core';
 import { FileUploadComponent } from '../file-upload/file-upload.component';
 
 @NgModule({
-  declarations: [DinnerOptionsComponent],
-  imports: [FileUploadComponent],
-  exports: [FileUploadComponent]
+  declarations: [DinnerOptionsComponent, FileUploadComponent],
+  bootstrap: [DinnerOptionsComponent]
 })
 @Component({
   selector: 'app-dinner-options',

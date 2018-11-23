@@ -1,11 +1,32 @@
-<div>
-  <p>
-    file-upload works!
-  </p>
+<div class="fileUploader">
+  <input type="file">
 
+  <mat-card class="progressCard">
+    <mat-card-content>
+      <label for="mat-progress-bar">sample-file-name.txt</label>
+      <mat-progress-bar
+        mode="indeterminate"
+        value="0"
+        color="accent"></mat-progress-bar>
+      
+        <button
+        type="button"
+        aria-label="Upload file"
+        mat-icon-button>
+        <mat-icon aria-label="Upload file icon icon">cloud_upload</mat-icon>
+      </button>
 
-  <mat-form-field>
-    <input type="file">
-  </mat-form-field>
+      <button
+        type="button"
+        aria-label="Cancel file"
+        mat-icon-button>
+        <mat-icon aria-label="Cancel file icon">cancel</mat-icon>
+      </button>
+    </mat-card-content>
+    <mat-card-actions>
+      <button class="cardBtn" mat-button>UPLOAD ALL</button>
+      <button class="cardBtn" mat-button>REMOVE ALL</button>
+    </mat-card-actions>
+  </mat-card>
 
 </div>
