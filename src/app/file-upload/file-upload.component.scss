@@ -3,6 +3,10 @@
 
 .fileUploader {
 
+  .noDisplay {
+    display: none;
+  }
+
   input[type="file"]::-webkit-file-upload-button, input[type="submit"] {
     color: $myForeground;
     background-color: $myPrimary;

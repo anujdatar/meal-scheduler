@@ -1,9 +1,9 @@
 <div class="fileUploader">
-  <input type="file">
+  <input type="file" id="uploadFile">
 
-  <mat-card class="progressCard">
+  <mat-card class="progressCard display">
     <mat-card-content>
-      <label for="mat-progress-bar">sample-file-name.txt</label>
+      <label for="mat-progress-bar" id="uploadFilename"></label>
       <mat-progress-bar
         mode="indeterminate"
         value="0"
@@ -24,7 +24,7 @@
       </button>
     </mat-card-content>
     <mat-card-actions>
-      <button class="cardBtn" mat-button>UPLOAD ALL</button>
+      <button class="cardBtn" mat-button (click)="readFname()">UPLOAD ALL</button>
       <button class="cardBtn" mat-button>REMOVE ALL</button>
     </mat-card-actions>
   </mat-card>
